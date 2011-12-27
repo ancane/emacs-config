@@ -6,29 +6,58 @@
 (setq default-input-method 'russian-computer)
 
 (global-font-lock-mode 1)
-(setq scroll-step 1)
-(setq default-tab-width 2)
 (global-hl-line-mode 1)
 (desktop-save-mode t)
 (global-linum-mode 1)
+
+(setq delete-by-moving-to-trash t)
+
+(setq tab-width 4)
+(setq default-tab-width 4)
 
 (global-set-key (kbd "C-<tab>") 'previous-buffer)
 (global-set-key (kbd "C-S-<tab>") 'next-buffer)
 (global-set-key (kbd "<f4>") 'revert-buffer)
 (global-set-key (kbd "<f11>") 'ibuffer)
 (global-set-key (kbd "<f10>") 'bookmark-bmenu-list)
-
-(require 'iswitchb)
-(iswitchb-mode 1)
-(add-to-list 'iswitchb-buffer-ignore "*Messages*")
-(add-to-list 'iswitchb-buffer-ignore "*Backtrace")
-(add-to-list 'iswitchb-buffer-ignore "*Quail Com")
-(add-to-list 'iswitchb-buffer-ignore "*Buffer")
-(add-to-list 'iswitchb-buffer-ignore "*fsm-debug")
-(add-to-list 'iswitchb-buffer-ignore "*Completions")
-(add-to-list 'iswitchb-buffer-ignore "^[tT][aA][gG][sS]$")
+(global-set-key (kbd "C-z") 'undo)
 
 (add-hook 'before-save-hook
           (lambda ()
             (esk-cleanup-buffer)
-            ))
+            )
+          )
+
+(setq scroll-step 1; плавный скроллинг
+      scroll-conservatively 100000; не прыгать на середину страницы при скроллинге
+      scroll-margin 5; начинать промотку страницы за 5 сток до края
+      scroll-preserve-screen-position t ; без этого не будет нормально работать страница вниз/вверх
+      )
+
+(setq redisplay-dont-pause t)
+
+
+(require 'recentf)
+
+;; get rid of `find-file-read-only' and replace it with something
+;; more useful.
+(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
+
+;; enable recent files mode.
+(recentf-mode t)
+
+;; 20 files ought to be enough.
+(setq recentf-max-saved-items 20)
+
+(defun ido-recentf-open ()
+  "Use `ido-completing-read' to \\[find-file] a recent file"
+  (interactive)
+  (if (find-file (ido-completing-read "Find recent file: " recentf-list))
+      (message "Opening file...")
+    (message "Aborting")))
+
+(defun magit-escape-for-shell (str)
+  (if (or (string= str "git")
+          (string-match "^--" str))
+      str
+    (concat "'" (replace-regexp-in-string "'" "'\\''" str) "'")))
