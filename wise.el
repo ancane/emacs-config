@@ -1,3 +1,6 @@
+(add-to-list 'load-path "~/.emacs.d/elpa/dired+")
+(require 'dired+)
+
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("ELPA" . "http://tromey.com/elpa/"))
@@ -91,6 +94,3 @@
  ido-enable-flex-matching nil     ; don't try to be too smart
  ido-max-prospects 8              ; don't spam my minibuffer
  ido-confirm-unique-completion t) ; wait for RET, even with unique completion
-
-;; when using ido, the confirmation is rather annoying...
-(setq confirm-nonexistent-file-or-buffer nil)
