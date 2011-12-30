@@ -1,5 +1,8 @@
 (add-to-list 'load-path "~/.emacs.d/elpa/dired+")
+(add-to-list 'load-path "~/.emacs.d/elpa/dired-details-1.3.1")
+
 (require 'dired+)
+(require 'dired-details)
 
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
@@ -9,9 +12,6 @@
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/color-theme-zenburn")
 (load-theme 'zenburn)
-
-(set-language-environment 'UTF-8)
-(setq default-input-method 'russian-computer)
 
 (global-font-lock-mode 1)
 (global-hl-line-mode 1)
@@ -94,3 +94,24 @@
  ido-enable-flex-matching nil     ; don't try to be too smart
  ido-max-prospects 8              ; don't spam my minibuffer
  ido-confirm-unique-completion t) ; wait for RET, even with unique completion
+
+
+;; Использовать окружение UTF-8
+(set-language-environment 'UTF-8)
+;; UTF-8 для вывода на экран
+(set-terminal-coding-system 'utf-8)
+;; UTF-8 для ввода с клавиатуры
+(set-keyboard-coding-system 'utf-8)
+;; Необходима поддержка кодировок cp866 и cp1251
+(define-coding-system-alias 'windows-1251 'cp1251)
+;; Установки автоопределения кодировок
+;; prefer-coding-system помещает кодировку в НАЧАЛО списка предпочитаемых кодировок
+;; Поэтому в данном случае первой будет определяться utf-8-unix
+(prefer-coding-system 'cp866)
+(prefer-coding-system 'koi8-r-unix)
+(prefer-coding-system 'windows-1251-dos)
+(prefer-coding-system 'utf-8-unix)
+;; Клавиатурная раскладка "как в Windows"
+(setq default-input-method 'russian-computer)
+
+(toggle-diredp-find-file-reuse-dir t)
