@@ -1,20 +1,25 @@
-(add-to-list 'load-path "~/.emacs.d/elpa/dired+")
-(add-to-list 'load-path "~/.emacs.d/elpa/dired-details-1.3.1")
-(add-to-list 'load-path "~/.emacs.d/elpa/nxhtml")
-
-(load "~/.emacs.d/elpa/nxhtml/autostart.el")
-
-(require 'dired+)
-(require 'dired-details)
-
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("ELPA" . "http://tromey.com/elpa/"))
 (package-initialize)
 
 
+(add-to-list 'load-path "~/.emacs.d/elpa/dired+")
+(add-to-list 'load-path "~/.emacs.d/elpa/dired-details-1.3.1")
+(add-to-list 'load-path "~/.emacs.d/elpa/nxhtml")
+(add-to-list 'load-path "~/.emacs.d/elpa/auto-complete-1.3.1")
+
+(load "~/.emacs.d/elpa/nxhtml/autostart.el")
+
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/color-theme-zenburn")
 (load-theme 'zenburn)
+
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-1.3.1/ac-dict")
+(ac-config-default)
+
+(require 'dired+)
+(require 'dired-details)
 
 (global-font-lock-mode 1)
 (global-hl-line-mode 1)
@@ -119,7 +124,16 @@
 
 (toggle-diredp-find-file-reuse-dir t)
 
-(add-to-list 'load-path "~/.emacs.d/elpa/auto-complete-1.3.1")
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-1.3.1/ac-dict")
-(ac-config-default)
+(setq ac-auto-start nil)
+(ac-set-trigger-key "TAB")
+
+(define-key global-map (kbd "RET") 'newline-and-indent)
+
+(defun kill-and-join-forward (&optional arg)
+  "If at end of line, join with following; otherwise kill line. Deletes whitespace at join."
+  (interactive "P")
+  (if (and (eolp) (not (bolp)))
+      (delete-indentation t)
+    (kill-line arg)))
+
+(global-set-key "\C-k" 'kill-and-join-forward)
