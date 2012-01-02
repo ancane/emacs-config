@@ -1,5 +1,8 @@
 (add-to-list 'load-path "~/.emacs.d/elpa/dired+")
 (add-to-list 'load-path "~/.emacs.d/elpa/dired-details-1.3.1")
+(add-to-list 'load-path "~/.emacs.d/elpa/nxhtml")
+
+(load "~/.emacs.d/elpa/nxhtml/autostart.el")
 
 (require 'dired+)
 (require 'dired-details)
@@ -115,3 +118,8 @@
 (setq default-input-method 'russian-computer)
 
 (toggle-diredp-find-file-reuse-dir t)
+
+(add-to-list 'load-path "~/.emacs.d/elpa/auto-complete-1.3.1")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-1.3.1/ac-dict")
+(ac-config-default)
