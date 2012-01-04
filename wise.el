@@ -8,6 +8,9 @@
 (add-to-list 'load-path "~/.emacs.d/elpa/dired-details-1.3.1")
 (add-to-list 'load-path "~/.emacs.d/elpa/nxhtml")
 (add-to-list 'load-path "~/.emacs.d/elpa/auto-complete-1.3.1")
+(add-to-list 'load-path "~/.emacs.d/elpa/js2-mode-20090814")
+
+(add-to-list 'auto-mode-alist '("\\.\\(xml\\|xsl\\|rng\\|xhtml\\)\\'" . nxml-mode))
 
 (load "~/.emacs.d/elpa/nxhtml/autostart.el")
 
@@ -78,10 +81,6 @@
       str
     (concat "'" (replace-regexp-in-string "'" "'\\''" str) "'")))
 
-(setq auto-mode-alist
-      (cons '("\\.\\(xml\\|xsl\\|rng\\|xhtml\\)\\'" . nxml-mode)
-            auto-mode-alist))
-
 (require 'ido)
 (ido-mode 'both) ;; for buffers and files
 (setq
@@ -137,3 +136,6 @@
     (kill-line arg)))
 
 (global-set-key "\C-k" 'kill-and-join-forward)
+
+(autoload 'js2-mode "js2-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
