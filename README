@@ -1,4 +1,0 @@
-Add to .emacs
-
-(setq custom-file "[path_to]wise.el")
-(load custom-file)
