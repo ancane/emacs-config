@@ -5,46 +5,23 @@
 (package-initialize)
 
 
-(add-to-list 'load-path "~/.emacs.d/themes/color-theme-solarized")
-(add-to-list 'load-path "~/.emacs.d/elpa/dired+")
-(add-to-list 'load-path "~/.emacs.d/elpa/dired-details-1.3.1")
-(add-to-list 'load-path "~/.emacs.d/elpa/nxhtml")
-(add-to-list 'load-path "~/.emacs.d/elpa/auto-complete-1.3.1")
-(add-to-list 'load-path "~/.emacs.d/elpa/js2-mode")
-(add-to-list 'load-path "~/.emacs.d/elpa/scala-mode-0.0.2")
-(add-to-list 'load-path "~/.emacs.d/elpa/yasnippet-0.6.1")
-(add-to-list 'load-path "~/.emacs.d/elpa/ensime-0.9.3.RC2/elisp")
-(add-to-list 'load-path "~/.emacs.d/ecb-2.40.1")
-
-(require 'dired+)
-(require 'dired-details)
 (require 'recentf)
 (require 'ibuf-ext)
 (require 'ido)
-(require 'smart-tab)
-(require 'auto-complete-config)
 (require 'undo-tree)
-(require 'scala-mode-auto)
-(require 'yasnippet)
-(require 'ensime)
-(require 'ecb)
 
 (add-to-list 'auto-mode-alist '("\\.\\(xml\\|xsl\\|rng\\|xhtml\\)\\'" . nxml-mode))
 (load "~/.emacs.d/elpa/nxhtml/autostart.el")
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/color-theme-zenburn")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/color-theme-solarized")
+;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/color-theme-solarized")
 (load-theme 'zenburn)
-
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-1.3.1/ac-dict")
-(ac-config-default)
 
 (global-font-lock-mode 1)
 (global-hl-line-mode 1)
 (desktop-save-mode t)
 (global-linum-mode 1)
 (recentf-mode t)
-;;(global-smart-tab-mode 1)
 (global-undo-tree-mode)
 (cua-mode t)
 (setq delete-by-moving-to-trash t)
@@ -101,25 +78,8 @@
 ;; Клавиатурная раскладка "как в Windows"
 (setq default-input-method 'russian-computer)
 
-(toggle-diredp-find-file-reuse-dir t)
-
-(add-to-list 'ibuffer-never-show-predicates "^\\*")
-
-(setq ibuffer-show-empty-filter-groups nil)
-(setq ibuffer-saved-filter-groups
-      '(("home"
-         ("emacs-config" (or (filename . ".emacs.d")
-                             (filename . "el-files")))
-         ("Org" (or (mode . org-mode)
-                    (filename . "OrgMode")))
-         ("Scala" (filename . "scala"))
-         ("ELisp" (filename . ".el"))
-         ("Web Dev" (or (mode . nxhtml-mode)
-                        (mode . css-mode)
-                        (mode . js2-mode)))
-         ("Magit" (name . "\*magit"))
-         )))
+;;(toggle-diredp-find-file-reuse-dir t)
 
 
-(setenv "JAVA_OPTS" "-Xmx1024m -Xms256m -XX:MaxPermSize=512m")
-(setenv "MAVEN_OPTS" "-Xmx1024m -Xms256m -XX:MaxPermSize=512m")
+(setenv "JAVA_OPTS" "-Xmx1024m -Xms256m -XX:MaxPermSize=128m -Dfile.encoding=UTF-8")
+(setenv "MAVEN_OPTS" "-Xmx1024m -Xms256m -XX:MaxPermSize=128m -Dfile.encoding=UTF-8")

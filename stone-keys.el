@@ -35,5 +35,3 @@
 (global-set-key (kbd "M-<up>") 'wise-move-line-up)
 (global-set-key (kbd "C-M-<down>") 'wise-copy-line-down)
 (global-set-key (kbd "C-q") 'kill-buffer)
-
-(global-set-key (kbd "<f12>") 'ecb-toggle-ecb-windows)
