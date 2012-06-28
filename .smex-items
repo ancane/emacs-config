@@ -1,0 +1,37 @@
+
+;; ----- smex-history -----
+(
+ dired
+ wdired-change-to-wdired-mode
+ package-list-packages
+ customize-themes
+ butterfly
+ latex-mode
+ doctor
+)
+
+;; ----- smex-data -----
+(
+ (anything-select-xfont . 1)
+ (set-default-font . 1)
+ (dired . 9)
+ (ensime . 6)
+ (ensime-ecb . 2)
+ (magit-tag . 1)
+ (nxml-mode . 1)
+ (undo-tree-visualize . 2)
+ (js2-mode . 5)
+ (indent-region . 1)
+ (latex-haskell-mumamo . 4)
+ (latex-mode . 2)
+ (package-list-packages . 4)
+ (butterfly . 3)
+ (doctor . 1)
+ (magit-init . 2)
+ (magit-status . 1)
+ (customize-themes . 1)
+ (haskell-mode . 4)
+ (haskell-mode-menu . 1)
+ (haskell-version . 1)
+ (wdired-change-to-wdired-mode . 1)
+)

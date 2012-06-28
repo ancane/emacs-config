@@ -1,0 +1,10 @@
+# Dirs
+url/
+backups/
+auto-save-list/
+
+# Files
+places
+ido.last
+.smex-items
+*.dat
