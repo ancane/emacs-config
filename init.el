@@ -1,12 +1,13 @@
+(add-to-list 'load-path "~/.emacs.d/el-files")
 
-(load "~/.emacs.d/el-files/ancane-modes.el")
-(load "~/.emacs.d/el-files/ancane-func.el")
-(load "~/.emacs.d/el-files/ancane-autocomplete.el")
-(load "~/.emacs.d/el-files/ancane-hooks.el")
-(load "~/.emacs.d/el-files/ancane-keys.el")
-(load "~/.emacs.d/el-files/ancane-magit.el")
-(load "~/.emacs.d/el-files/ancane-js2.el")
-(load "~/.emacs.d/el-files/ancane-scala.el")
+(load "ancane-modes.el")
+(load "ancane-func.el")
+(load "ancane-autocomplete.el")
+(load "ancane-hooks.el")
+(load "ancane-keys.el")
+(load "ancane-magit.el")
+(load "ancane-js2.el")
+(load "ancane-scala.el")
 
 (set-default-font "terminus-12")
 
