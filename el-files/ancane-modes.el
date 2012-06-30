@@ -30,15 +30,13 @@
 
 (setq scroll-step 1; плавный скроллинг
       scroll-conservatively 100000; не прыгать на середину страницы при скроллинге
-      scroll-margin 5; начинать промотку страницы за 5 сток до края
+      scroll-up-margin 5; начинать промотку страницы за 5 сток до края
       scroll-preserve-screen-position t ; без этого не будет нормально работать страница вниз/вверх
       )
 
 ;; 20 files ought to be enough.
 (setq recentf-max-saved-items 20)
 
-;; Needed for ECB
-(setq stack-trace-on-error t)
 
 (ido-mode 'both) ;; for buffers and files
 (setq ido-save-directory-list-file "~/.emacs.d/ido.last"
@@ -78,8 +76,7 @@
 ;; Клавиатурная раскладка "как в Windows"
 (setq default-input-method 'russian-computer)
 
-;;(toggle-diredp-find-file-reuse-dir t)
-
+(setq x-select-enable-clipboard t)
 
 (setenv "JAVA_OPTS" "-Xmx1024m -Xms256m -XX:MaxPermSize=128m -Dfile.encoding=UTF-8")
 (setenv "MAVEN_OPTS" "-Xmx1024m -Xms256m -XX:MaxPermSize=128m -Dfile.encoding=UTF-8")

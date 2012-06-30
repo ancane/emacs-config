@@ -1,5 +1,3 @@
-(global-set-key (kbd "C-M-<left>") 'previous-buffer)
-(global-set-key (kbd "C-M-<right>") 'next-buffer)
 (global-set-key (kbd "<f4>") 'revert-buffer)
 (global-set-key (kbd "<f11>") 'ibuffer)
 (global-set-key (kbd "<f10>") 'bookmark-bmenu-list)
@@ -28,10 +26,19 @@
 
 (global-set-key [home] 'beginning-of-line)
 (global-set-key [end] 'end-of-line)
-(global-set-key [(meta g)] 'goto-line)
 (global-set-key (kbd "M-<f4>") 'save-buffers-kill-terminal)
+(global-set-key [(meta g)] 'goto-line)
 
-(global-set-key (kbd "M-<down>") 'wise-move-line-down)
-(global-set-key (kbd "M-<up>") 'wise-move-line-up)
-(global-set-key (kbd "C-M-<down>") 'wise-copy-line-down)
-(global-set-key (kbd "C-q") 'kill-buffer)
+;;(global-set-key (kbd "M-<down>")   'wise-move-line-down)
+;;(global-set-key (kbd "M-<up>")     'wise-move-line-up)
+;;(global-set-key (kbd "C-M-<down>") 'wise-copy-line-down)
+
+(global-set-key (kbd "C-q")        'kill-buffer)
+
+(global-set-key (kbd "M-<left>") 'previous-buffer)
+(global-set-key (kbd "M-<right>") 'next-buffer)
+
+;;(global-set-key (kbd "M-<left>")  'windmove-left)         ; move to left windnow
+;;(global-set-key (kbd "M-<right>") 'windmove-right)        ; move to right window
+(global-set-key (kbd "M-<up>")    'windmove-up)           ; move to upper window
+(global-set-key (kbd "M-<down>")  'windmove-down)         ; move to downer window

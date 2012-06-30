@@ -5,14 +5,16 @@
 
 (setq ibuffer-saved-filter-groups
       '(("home"
-         ("emacs-config" (or (filename . ".emacs.d")
-                             (filename . "el-files")))
+         ("Haskell" (mode . haskell-mode))
          ("Org" (or (mode . org-mode)
                     (filename . "OrgMode")))
-         ("Scala" (filename . "scala"))
-         ("ELisp" (filename . ".el"))
+         ("Scala" (mode . scala-mode))
+         ("emacs-config" (or (filename . ".emacs.d")
+                             (filename . "el-files")))
+         ("ELisp" (filename . "el"))
          ("Web Dev" (or (mode . nxhtml-mode)
                         (mode . css-mode)
                         (mode . js2-mode)))
+         ("Dired" (mode . dired-mode))
          ("Magit" (name . "\*magit"))
          )))

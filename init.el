@@ -8,11 +8,13 @@
 (load "ancane-magit.el")
 (load "ancane-js2.el")
 (load "ancane-scala.el")
+(load "ancane-ibuffer.el")
+(load "ancane-hs.el")
 
 (set-default-font "terminus-12")
 
 
-(require 'dired-x)
-(setq-default dired-omit-files-p t) ; this is buffer-local variable
-(setq dired-omit-files
-      (concat dired-omit-files "\\|^\\..+$"))
+;(require 'dired-x)
+;(setq-default dired-omit-files-p t) ; this is buffer-local variable
+;(setq dired-omit-files
+;      (concat dired-omit-files "\\|^\\..+$"))
