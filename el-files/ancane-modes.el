@@ -29,8 +29,9 @@
 (setq redisplay-dont-pause t)
 
 (setq scroll-step 1; плавный скроллинг
-      scroll-conservatively 100000; не прыгать на середину страницы при скроллинге
-      scroll-up-margin 5; начинать промотку страницы за 5 сток до края
+      scroll-conservatively 50; не прыгать на середину страницы при скроллинге
+      scroll-margin 5; начинать промотку страницы за 5 сток до края
+      scroll-up-margin 5
       scroll-preserve-screen-position t ; без этого не будет нормально работать страница вниз/вверх
       )
 
