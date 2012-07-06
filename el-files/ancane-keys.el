@@ -7,7 +7,7 @@
 (global-set-key (kbd "C-k") 'kill-and-join-forward)
 (global-set-key (kbd "C-a") 'mark-whole-buffer)
 
-(define-key global-map (kbd "RET") 'newline-and-indent)
+;;(define-key global-map (kbd "RET") 'newline)
 
 (global-set-key (kbd "C-s") 'save-buffer)
 (global-set-key (kbd "C-x C-s") 'save-some-buffers)

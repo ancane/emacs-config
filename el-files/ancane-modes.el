@@ -74,7 +74,7 @@
 (prefer-coding-system 'koi8-r-unix)
 (prefer-coding-system 'windows-1251-dos)
 (prefer-coding-system 'utf-8-unix)
-;; Клавиатурная раскладка "как в Windows"
+
 (setq default-input-method 'russian-computer)
 
 (setq x-select-enable-clipboard t)
