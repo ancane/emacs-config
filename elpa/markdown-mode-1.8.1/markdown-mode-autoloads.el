@@ -4,7 +4,7 @@
 
 
 ;;;### (autoloads (markdown-mode) "markdown-mode" "markdown-mode.el"
-;;;;;;  (20461 28387))
+;;;;;;  (20471 26633))
 ;;; Generated autoloads from markdown-mode.el
 
 (autoload 'markdown-mode "markdown-mode" "\
@@ -14,7 +14,7 @@ Major mode for editing Markdown files.
 
 ;;;***
 
-;;;### (autoloads nil nil ("markdown-mode-pkg.el") (20461 28387 778988))
+;;;### (autoloads nil nil ("markdown-mode-pkg.el") (20471 26633 131719))
 
 ;;;***
 

@@ -4,15 +4,15 @@
 
 
 ;;;### (autoloads nil "zen-and-art-theme" "zen-and-art-theme.el"
-;;;;;;  (20461 28385))
+;;;;;;  (20471 26271))
 ;;; Generated autoloads from zen-and-art-theme.el
 
 (when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
 ;;;***
 
-;;;### (autoloads nil nil ("zen-and-art-theme-pkg.el") (20461 28385
-;;;;;;  493829))
+;;;### (autoloads nil nil ("zen-and-art-theme-pkg.el") (20471 26271
+;;;;;;  181239))
 
 ;;;***
 

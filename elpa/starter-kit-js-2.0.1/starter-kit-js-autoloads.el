@@ -3,8 +3,8 @@
 ;;; Code:
 
 
-;;;### (autoloads nil "starter-kit-js" "starter-kit-js.el" (20222
-;;;;;;  4472))
+;;;### (autoloads nil "starter-kit-js" "starter-kit-js.el" (20471
+;;;;;;  26643))
 ;;; Generated autoloads from starter-kit-js.el
 
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
@@ -13,7 +13,8 @@
 
 ;;;***
 
-;;;### (autoloads nil nil ("starter-kit-js-pkg.el") (20222 4473 52000))
+;;;### (autoloads nil nil ("starter-kit-js-pkg.el") (20471 26643
+;;;;;;  705273))
 
 ;;;***
 

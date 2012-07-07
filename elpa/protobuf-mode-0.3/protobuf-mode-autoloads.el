@@ -4,7 +4,7 @@
 
 
 ;;;### (autoloads (protobuf-mode) "protobuf-mode" "protobuf-mode.el"
-;;;;;;  (20461 28408))
+;;;;;;  (20471 27156))
 ;;; Generated autoloads from protobuf-mode.el
  (add-to-list 'auto-mode-alist '("\\.proto\\'" . protobuf-mode))
 
@@ -21,7 +21,7 @@ Key bindings:
 
 ;;;***
 
-;;;### (autoloads nil nil ("protobuf-mode-pkg.el") (20461 28408 590792))
+;;;### (autoloads nil nil ("protobuf-mode-pkg.el") (20471 27156 863175))
 
 ;;;***
 

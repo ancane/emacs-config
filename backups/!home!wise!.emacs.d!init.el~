@@ -1,0 +1,34 @@
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote (zenburn)))
+ '(custom-safe-themes (quote ("71b172ea4aad108801421cc5251edb6c792f3adbaecfa1c52e94e3d99634dee7" default)))
+ '(custom-theme-directory "~/.emacs.d/elpa"))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+;(load-theme 'zenburn t)
+
+
+;(add-to-list 'load-path "~/.emacs.d/custom")
+;(load "ancane-theme.el")
+;(load "ancane-ido.el")
+
+;(load "ancane-modes.el")
+;(load "ancane-func.el")
+;(load "ancane-autocomplete.el")
+;(load "ancane-hooks.el")
+;(load "ancane-keys.el")
+;(load "ancane-magit.el")
+;(load "ancane-js2.el")
+;(load "ancane-scala.el")
+;(load "ancane-ibuffer.el")
+;(load "ancane-hs.el")
+
+(set-default-font "terminus-12")

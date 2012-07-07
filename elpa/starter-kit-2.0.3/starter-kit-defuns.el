@@ -78,7 +78,7 @@
 
 (defun esk-add-watchwords ()
   (font-lock-add-keywords
-   nil '(("\\<\\(|TODO\\|FIXME\\|HACK\\|REFACTOR\\|NOCOMMIT\\)"
+   nil '(("\\<\\(FIX\\|TODO\\|FIXME\\|HACK\\|REFACTOR\\|NOCOMMIT\\)"
           1 font-lock-warning-face t))))
 
 (add-hook 'prog-mode-hook 'esk-local-column-number-mode)
@@ -106,7 +106,7 @@
 (defun esk-cleanup-buffer ()
   "Perform a bunch of operations on the whitespace content of a buffer."
   (interactive)
-  ;;(esk-indent-buffer)
+  (esk-indent-buffer)
   (esk-untabify-buffer)
   (delete-trailing-whitespace))
 

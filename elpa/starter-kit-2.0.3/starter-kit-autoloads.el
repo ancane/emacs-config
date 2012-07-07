@@ -3,7 +3,7 @@
 ;;; Code:
 
 
-;;;### (autoloads nil "starter-kit" "starter-kit.el" (20215 42492))
+;;;### (autoloads nil "starter-kit" "starter-kit.el" (20471 26644))
 ;;; Generated autoloads from starter-kit.el
 
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode)) (when (fboundp mode) (funcall mode -1)))
@@ -29,7 +29,7 @@
 ;;;***
 
 ;;;### (autoloads nil nil ("starter-kit-defuns.el" "starter-kit-misc.el"
-;;;;;;  "starter-kit-pkg.el") (20215 42493 13000))
+;;;;;;  "starter-kit-pkg.el") (20471 26644 226469))
 
 ;;;***
 

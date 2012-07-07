@@ -1,0 +1,41 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/wise/.emacs.d_backup/" . "el-files/")
+ ("/home/wise/.emacs.d/" . "custom/")
+ ("/home/wise/" . ".emacs.d/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/wise/.emacs.d/custom/"
+ "/home/wise/.emacs.d_backup/el-files/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "ancane-general.el"
+ "ancane-ido.el"
+ "ancane-keys.el"
+ "ancane-theme.el"
+ "ancane-modes.el"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/wise/.emacs.d/custom/" (20472 19235) "ancane-func.el" "./" "ancane-modes.el" "ancane-keys.el" "ancane-general.el" "../" "ancane-ido.el")
+
+ ("/home/wise/.emacs.d/" (20472 19236) "custom/" "places" "./" "auto-save-list/" ".smex-items" "backups/" "../" "init.el" "elpa/")
+
+ ("/home/wise/" (20472 19236) ".recentf" ".fehbg" ".fontconfig/" ".bash_history" ".ghc/" ".xmonad/" ".Xresources" ".rest-client/" ".erlang.cookie" ".xinitrc_xmonad" ".gnome2_private/" ".gconf/" ".bash_logout" ".pulse/" ".gtkrc-2.0.bak" ".gnupg/" ".pulse-cookie" ".ssh_wise/" ".lesshst" "Downloads/" ".profile" "Desktop/" ".claws-mail/" "./" "Dropbox/" ".java/" ".config/" ".mplayer/" "Video/" ".subversion/" "Schermafbeelding 2012-06-19 om 15.59.39.png" ".Skype/" ".esd_auth" ".wicd/" "workspace/" ".m2/" ".macromedia/" ".scala_history" ".subversion_IDEA/" ".cache/" ".Xauthority" ".smex-items" ".gstreamer-0.10/" ".wallpapers/" ".thumbnails/" ".emerald/" ".emacs_backup" ".gnome2/" ".pki/" "IMG_06072012_164643.png" ".bashrc" ".gtk-bookmarks" ".ssh/" ".gqview/" "Documentation/" ".cabal/" ".xinitrc" ".adobe/" ".gtkrc-2.0" ".ido.last" ".IdeaIC11/" ".xscreensaver" ".mozilla/" ".mysqlgui/" ".gmrun_history" ".dbus/" ".dropbox/" ".opera/" ".local/" ".xmobarrc" ".emacs.d_backup/" ".bash_profile" ".gitconfig" ".emacs.d/" ".mysql_history" "../" "Refactoring Databases - Evolutionary Database Design by Scott W. Ambler, Pramod J. Sadalage 2006.chm" ".xsession")
+
+ ("/home/wise/.emacs.d/elpa/" (20471 60459) "twilight-theme-1.0.0/" "dired+-21.2/" "scala-mode-0.0.2/" "typing-1.1.4/" "fastnav-1.0.7/" "isearch+-21.0/" "zencoding-mode-0.5.1/" "coffee-mode-0.3.0/" "rainbow-mode-0.2/" "starter-kit-2.0.3/" "starter-kit-lisp-2.0.3/" "elisp-slime-nav-0.2/" "ido-ubiquitous-1.0/" "find-file-in-project-3.0/" "./" "haml-mode-3.0.14/" "idle-highlight-mode-1.1.2/" "yasnippet-0.6.1/" "smooth-scroll-1.1/" "json-1.2/" "smex-1.1.2/" "zenburn-theme-1.5/" "yaml-mode-0.0.7/" "multi-project-0.0.5/" "projectile-0.7/" "undo-tree-0.5.2/" "linum-off-0.1/" "zen-and-art-theme-1.0.1/" "markdown-mode-1.8.1/" "jgraph-mode-0.0/" "diminish-0.44/" "js2-mode-20090814/" "less-css-mode-0.6/" "lineno-0.1/" "archives/" "solarized-theme-0.5.0/" "igrep-2.113/" "track-closed-files-0.1/" "yasnippet-bundle-0.6.1/" "goto-last-change-1.2/" "ujelly-theme-1.0.5/" "protobuf-mode-0.3/" "paredit-22/" "emacsd-tile-0.1/" "magit-1.1.1/" "sass-mode-3.0.14/" "httpcode-0.1/" "linear-undo-5.2/" "../" "move-text-1.0/" "starter-kit-js-2.0.1/" "dired-single-1.7.0/")
+
+ ("/home/wise/.emacs.d_backup/el-files/" (20469 21821) "ancane-magit.el" "ancane-ibuffer.el" "ancane-func.el" "./" "ancane-hooks.el" "ancane-js2.el" "ancane-autocomplete.el" "ancane-modes.el" "ancane-hs.el" "ancane-keys.el" "../" "ancane-scala.el")
+
+ ("/home/wise/.emacs.d_backup/" (20471 11867) ".git/" "ido.last" "places" "./" "ac-comphist.dat" "auto-save-list/" ".smex-items" "themes/" ".gitignore" "el-files/" "backups/" "url/" "../" "init.el" "elpa/")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

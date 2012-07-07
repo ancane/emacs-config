@@ -3,8 +3,8 @@
 ;;; Code:
 
 
-;;;### (autoloads (scala-mode) "scala-mode" "scala-mode.el" (20249
-;;;;;;  13206))
+;;;### (autoloads (scala-mode) "scala-mode" "scala-mode.el" (20471
+;;;;;;  26931))
 ;;; Generated autoloads from scala-mode.el
 
 (autoload 'scala-mode "scala-mode" "\
@@ -16,8 +16,8 @@ When started, run `scala-mode-hook'.
 
 ;;;***
 
-;;;### (autoloads nil "scala-mode-auto" "scala-mode-auto.el" (20249
-;;;;;;  13205))
+;;;### (autoloads nil "scala-mode-auto" "scala-mode-auto.el" (20471
+;;;;;;  26931))
 ;;; Generated autoloads from scala-mode-auto.el
 
 (add-to-list 'auto-mode-alist '("\\.scala\\'" . scala-mode))
@@ -27,7 +27,7 @@ When started, run `scala-mode-hook'.
 ;;;### (autoloads (scala-quit-interpreter scala-load-file scala-eval-buffer
 ;;;;;;  scala-eval-definition scala-eval-region scala-switch-to-interpreter
 ;;;;;;  scala-run-scala scala-interpreter-running-p-1) "scala-mode-inf"
-;;;;;;  "scala-mode-inf.el" (20249 13205))
+;;;;;;  "scala-mode-inf.el" (20471 26931))
 ;;; Generated autoloads from scala-mode-inf.el
 
 (autoload 'scala-interpreter-running-p-1 "scala-mode-inf" "\
@@ -94,8 +94,8 @@ Quit Scala interpreter.
 ;;;;;;  "scala-mode-feature-speedbar.el" "scala-mode-feature-tags.el"
 ;;;;;;  "scala-mode-feature.el" "scala-mode-fontlock.el" "scala-mode-indent.el"
 ;;;;;;  "scala-mode-lib.el" "scala-mode-navigation.el" "scala-mode-pkg.el"
-;;;;;;  "scala-mode-ui.el" "scala-mode-variables.el") (20249 13206
-;;;;;;  236000))
+;;;;;;  "scala-mode-ui.el" "scala-mode-variables.el") (20471 26931
+;;;;;;  644672))
 
 ;;;***
 
