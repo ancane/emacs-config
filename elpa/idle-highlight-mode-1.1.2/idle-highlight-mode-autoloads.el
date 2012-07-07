@@ -4,7 +4,7 @@
 
 
 ;;;### (autoloads (idle-highlight-mode) "idle-highlight-mode" "idle-highlight-mode.el"
-;;;;;;  (20215 42490))
+;;;;;;  (20471 26642))
 ;;; Generated autoloads from idle-highlight-mode.el
 
 (autoload 'idle-highlight-mode "idle-highlight-mode" "\
@@ -14,8 +14,8 @@ Idle-Highlight Minor Mode
 
 ;;;***
 
-;;;### (autoloads nil nil ("idle-highlight-mode-pkg.el") (20215 42490
-;;;;;;  158000))
+;;;### (autoloads nil nil ("idle-highlight-mode-pkg.el") (20471 26642
+;;;;;;  53930))
 
 ;;;***
 

@@ -49,7 +49,7 @@
 ;;;;;;  diredp-dired-union diredp-dired-for-files-other-window diredp-dired-for-files
 ;;;;;;  diredp-dired-files-other-window diredp-dired-files diredp-w32-local-drives
 ;;;;;;  diredp-prompt-for-bookmark-prefix-flag diff-switches) "dired+"
-;;;;;;  "dired+.el" (20461 25938))
+;;;;;;  "dired+.el" (20471 28140))
 ;;; Generated autoloads from dired+.el
 
 (defvar diff-switches "-c" "\
@@ -1129,7 +1129,7 @@ Send a bug report about a Dired+ problem.
 
 ;;;***
 
-;;;### (autoloads nil nil ("dired+-pkg.el") (20461 25938 553022))
+;;;### (autoloads nil nil ("dired+-pkg.el") (20471 28140 169858))
 
 ;;;***
 

@@ -1,20 +1,37 @@
-(add-to-list 'load-path "~/.emacs.d/el-files")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote (zenburn)))
+ '(custom-safe-themes (quote ("71b172ea4aad108801421cc5251edb6c792f3adbaecfa1c52e94e3d99634dee7" default)))
+ '(custom-theme-directory "~/.emacs.d/elpa")
+ '(custom-theme-load-path (quote ("/home/wise/.emacs.d/elpa/solarized-theme-0.5.0/" "/home/wise/.emacs.d/elpa/twilight-theme-1.0.0/" "/home/wise/.emacs.d/elpa/zen-and-art-theme-1.0.1/" "/home/wise/.emacs.d/elpa/zenburn-theme-1.5/" custom-theme-directory t))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 
-(load "ancane-modes.el")
+(add-to-list 'load-path "~/.emacs.d/custom")
+
+(load "ancane-ido.el")
+(load "ancane-general.el")
 (load "ancane-func.el")
-(load "ancane-autocomplete.el")
-(load "ancane-hooks.el")
 (load "ancane-keys.el")
-(load "ancane-magit.el")
-(load "ancane-js2.el")
-(load "ancane-scala.el")
 (load "ancane-ibuffer.el")
-(load "ancane-hs.el")
+
+
+;(load "ancane-modes.el")
+;(load "ancane-func.el")
+;(load "ancane-autocomplete.el")
+;(load "ancane-hooks.el")
+;(load "ancane-keys.el")
+;(load "ancane-magit.el")
+;(load "ancane-js2.el")
+;(load "ancane-scala.el")
+;(load "ancane-ibuffer.el")
+;(load "ancane-hs.el")
 
 (set-default-font "terminus-12")
-
-
-;(require 'dired-x)
-;(setq-default dired-omit-files-p t) ; this is buffer-local variable
-;(setq dired-omit-files
-;      (concat dired-omit-files "\\|^\\..+$"))

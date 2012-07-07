@@ -3,7 +3,7 @@
 ;;; Code:
 
 
-;;;### (autoloads (magit-status) "magit" "magit.el" (20461 28388))
+;;;### (autoloads (magit-status) "magit" "magit.el" (20471 26633))
 ;;; Generated autoloads from magit.el
 
 (autoload 'magit-status "magit" "\
@@ -21,7 +21,7 @@ user input.
 ;;;***
 
 ;;;### (autoloads (turn-on-magit-stgit magit-stgit-mode) "magit-stgit"
-;;;;;;  "magit-stgit.el" (20461 28388))
+;;;;;;  "magit-stgit.el" (20471 26633))
 ;;; Generated autoloads from magit-stgit.el
 
 (autoload 'magit-stgit-mode "magit-stgit" "\
@@ -37,7 +37,7 @@ Unconditionally turn on `magit-stgit-mode'.
 ;;;***
 
 ;;;### (autoloads (turn-on-magit-svn magit-svn-mode) "magit-svn"
-;;;;;;  "magit-svn.el" (20461 28388))
+;;;;;;  "magit-svn.el" (20471 26633))
 ;;; Generated autoloads from magit-svn.el
 
 (autoload 'magit-svn-mode "magit-svn" "\
@@ -53,7 +53,7 @@ Unconditionally turn on `magit-svn-mode'.
 ;;;***
 
 ;;;### (autoloads (turn-on-magit-topgit magit-topgit-mode) "magit-topgit"
-;;;;;;  "magit-topgit.el" (20461 28388))
+;;;;;;  "magit-topgit.el" (20471 26633))
 ;;; Generated autoloads from magit-topgit.el
 
 (autoload 'magit-topgit-mode "magit-topgit" "\
@@ -69,7 +69,7 @@ Unconditionally turn on `magit-topgit-mode'.
 ;;;***
 
 ;;;### (autoloads nil nil ("magit-bisect.el" "magit-key-mode.el"
-;;;;;;  "magit-pkg.el") (20461 28388 836211))
+;;;;;;  "magit-pkg.el") (20471 26633 998246))
 
 ;;;***
 
