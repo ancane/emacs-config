@@ -1,4 +1,4 @@
-(global-set-key (kbd "<f4>") 'revert-buffer)
+;;(global-set-key (kbd "<f4>") 'revert-buffer)
 (global-set-key (kbd "<f11>") 'ibuffer)
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-x C-r") 'ido-recentf-open)
@@ -25,7 +25,6 @@
 ;;(global-set-key (kbd "M-s-<down>")  'windmove-down)         ; move to downer window
 
 ;;(define-key global-map (kbd "RET") 'newline)
-
 
 ;;(global-set-key (kbd "C-d") 'kill-whole-line)
 ;;(global-set-key (kbd "<f10>") 'bookmark-bmenu-list)

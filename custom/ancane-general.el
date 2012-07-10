@@ -6,7 +6,7 @@
 (desktop-save-mode t)
 (global-linum-mode 1)
 ;;(global-undo-tree-mode)
-;;(cua-mode t)
+(cua-mode t)
 (setq delete-by-moving-to-trash t)
 
 (setq redisplay-dont-pause t)
