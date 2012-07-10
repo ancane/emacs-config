@@ -9,3 +9,10 @@ places
 ido.last
 .smex-items
 *.dat
+*~
+*#
+.#*
+!.#
+.ensime
+.ensime_lucene
+TAGS

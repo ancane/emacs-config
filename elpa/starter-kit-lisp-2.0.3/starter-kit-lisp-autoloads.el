@@ -29,7 +29,8 @@ Face used to dim parentheses." :group (quote starter-kit-faces))
 
 (eval-after-load 'paredit '(define-key paredit-mode-map (kbd "M-)") 'paredit-forward-slurp-sexp))
 
-(dolist (mode '(scheme emacs-lisp lisp clojure)) (when (> (display-color-cells) 8) (font-lock-add-keywords (intern (concat (symbol-name mode) "-mode")) '(("(\\|)" quote esk-paren-face)))) (add-hook (intern (concat (symbol-name mode) "-mode-hook")) 'esk-turn-on-paredit) (add-hook (intern (concat (symbol-name mode) "-mode-hook")) 'esk-turn-on-paredit))
+(dolist (mode '(scheme emacs-lisp lisp clojure)) (when (> (display-color-cells) 8) (font-lock-add-keywords (intern (concat (symbol-name mode) "-mode")) '(("(\\|)" quote esk-paren-face))))
+)
 
 (defun esk-pretty-fn nil (font-lock-add-keywords nil `(("(\\(fn\\>\\)" (0 (progn (compose-region (match-beginning 1) (match-end 1) "ƒ") nil))))))
 

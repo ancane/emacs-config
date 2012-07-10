@@ -1,8 +1,18 @@
+(require 'package)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("ELPA" . "http://tromey.com/elpa/"))
+(package-initialize)
+
 (setq ring-bell-function 'ignore) ;; No ring or visual warnings
+
+(require 'auto-complete-config)
+(ac-config-default)
+(global-auto-complete-mode t)
+(auto-complete-mode t)
+(paredit-mode -1)
 
 ;;(global-font-lock-mode 1)
 ;;(global-hl-line-mode 1)
-
 (desktop-save-mode t)
 (global-linum-mode 1)
 ;;(global-undo-tree-mode)
