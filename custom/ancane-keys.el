@@ -19,6 +19,11 @@
 (global-set-key (kbd "C-s") 'save-buffer)
 (global-set-key (kbd "C-x C-s") 'save-some-buffers)
 
+(global-set-key (kbd "S-<left>")  'windmove-left) 
+(global-set-key (kbd "S-<right>") 'windmove-right) 
+(global-set-key (kbd "S-<up>")    'windmove-up) 
+(global-set-key (kbd "S-<down>")  'windmove-down)
+
 ;;(global-set-key (kbd "M-<left>")  'windmove-left)         ; move to left windnow
 ;;(global-set-key (kbd "M-<right>") 'windmove-right)        ; move to right window
 ;;(global-set-key (kbd "M-s-<up>")    'windmove-up)           ; move to upper window
