@@ -14,6 +14,8 @@
 ;;(global-font-lock-mode 1)
 ;;(global-hl-line-mode 1)
 (desktop-save-mode t)
+(setq desktop-save-buffer t)
+
 (global-linum-mode 1)
 ;;(global-undo-tree-mode)
 (cua-mode t)

@@ -15,6 +15,9 @@
  ;; If there is more than one, they won't work right.
  )
 
+(add-to-list 'default-frame-alist  '(font . "-xos4-Terminus-normal-normal-normal-*-16-*-*-*-c-80-iso10646-1"))
+(set-default-font "-xos4-Terminus-normal-normal-normal-*-16-*-*-*-c-80-iso10646-1")
+
 (add-to-list 'load-path "~/.emacs.d/custom")
 
 (load "ancane-ido.el")
@@ -23,17 +26,3 @@
 (load "ancane-keys.el")
 (load "ancane-ibuffer.el")
 (load "ancane-scala.el")
-
-
-;(load "ancane-modes.el")
-;(load "ancane-func.el")
-;(load "ancane-autocomplete.el")
-;(load "ancane-hooks.el")
-;(load "ancane-keys.el")
-;(load "ancane-magit.el")
-;(load "ancane-js2.el")
-;(load "ancane-scala.el")
-;(load "ancane-ibuffer.el")
-;(load "ancane-hs.el")
-
-(set-default-font "terminus-12")

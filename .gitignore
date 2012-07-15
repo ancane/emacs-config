@@ -3,6 +3,7 @@ url/
 backups/
 auto-save-list/
 archives/
+elpa/archives/
 
 # Files
 places
