@@ -14,7 +14,7 @@
                     (mode . css-mode)
                     (mode . js-mode)
                     (mode . js2-mode)))
-         ("SQL" mode . sql-mode)
+         ("SQL" (mode . sql-mode))
          ("Configs" (or (filename . ".emacs.d")
                         (filename . "el-files")))
          ("Haskell" (mode . haskell-mode))

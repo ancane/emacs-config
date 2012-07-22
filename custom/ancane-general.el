@@ -52,9 +52,3 @@
 
 (setenv "JAVA_OPTS" "-Xmx1024m -Xms256m -XX:MaxPermSize=128m -Dfile.encoding=UTF-8")
 (setenv "MAVEN_OPTS" "-Xmx1024m -Xms256m -XX:MaxPermSize=128m -Dfile.encoding=UTF-8")
-
-
-(add-hook 'before-save-hook
-          (lambda ()
-            (esk-cleanup-buffer)
-            ))
