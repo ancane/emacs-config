@@ -17,8 +17,8 @@
  ;; If there is more than one, they won't work right.
  )
 
-(add-to-list 'default-frame-alist  '(font . "-xos4-Terminus-normal-normal-normal-*-16-*-*-*-c-80-iso10646-1"))
-(set-default-font "-xos4-Terminus-normal-normal-normal-*-16-*-*-*-c-80-iso10646-1")
+(add-to-list 'default-frame-alist  '(font . "-xos4-terminus-bold-*-normal-*-18-180-72-72-c-100-koi8-r"))
+(set-default-font "-xos4-terminus-bold-*-normal-*-18-180-72-72-c-100-koi8-r")
 
 (add-to-list 'load-path "~/.emacs.d/custom")
 
