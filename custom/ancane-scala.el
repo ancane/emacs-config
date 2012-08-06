@@ -1,5 +1,5 @@
 ;(add-to-list 'load-path "~/workspace/ensime/dist_2.9.2/elisp")
-(add-to-list 'load-path "~/workspace/ensime_2.9.2-RC1/elisp")
+(add-to-list 'load-path "~/.emacd.d/ensime_2.9.2-0.9.6.5/elisp")
 
 ;;(require 'scala-mode)
 (require 'ensime)
