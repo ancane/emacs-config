@@ -28,3 +28,4 @@
 (load "ancane-keys.el")
 (load "ancane-ibuffer.el")
 (load "ancane-scala.el")
+(put 'ido-exit-minibuffer 'disabled nil)

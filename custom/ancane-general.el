@@ -1,6 +1,7 @@
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("ELPA" . "http://tromey.com/elpa/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
 (setq ring-bell-function 'ignore) ;; No ring or visual warnings
@@ -18,6 +19,11 @@
 
 (global-linum-mode 1)
 ;;(global-undo-tree-mode)
+
+(setq undo-tree-mode-lighter "")
+(require 'undo-tree)
+(global-undo-tree-mode)
+
 (cua-mode t)
 (setq delete-by-moving-to-trash t)
 
@@ -52,3 +58,15 @@
 
 (setenv "JAVA_OPTS" "-Xmx1024m -Xms256m -XX:MaxPermSize=128m -Dfile.encoding=UTF-8")
 (setenv "MAVEN_OPTS" "-Xmx1024m -Xms256m -XX:MaxPermSize=128m -Dfile.encoding=UTF-8")
+
+(global-subword-mode 1)
+
+(setq ediff-diff-options "-w")
+(setq ediff-split-window-function 'split-window-horizontally)
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
+
+(global-auto-revert-mode 1)
+
+(setq global-auto-revert-non-file-buffers t)
+(setq auto-revert-verbose nil)
+
