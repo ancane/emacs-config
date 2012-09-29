@@ -28,7 +28,6 @@
 (setq delete-by-moving-to-trash t)
 
 (setq redisplay-dont-pause t)
-
 (setq scroll-step 1; плавный скроллинг
       scroll-conservatively 50; не прыгать на середину страницы при скроллинге
       scroll-margin 5; начинать промотку страницы за 5 сток до края

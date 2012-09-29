@@ -38,3 +38,5 @@
           (lambda ()
             (require 'rename-sgml-tag)
             (define-key sgml-mode-map (kbd "C-c r") 'rename-sgml-tag)))
+
+(global-set-key (kbd "<f12>") 'nav-toggle)

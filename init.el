@@ -25,7 +25,9 @@
 (load "ancane-ido.el")
 (load "ancane-general.el")
 (load "ancane-func.el")
-(load "ancane-keys.el")
 (load "ancane-ibuffer.el")
+(load "ancane-keys.el")
+(load "ancane-nav.el")
 (load "ancane-scala.el")
+
 (put 'ido-exit-minibuffer 'disabled nil)
