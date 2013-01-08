@@ -40,3 +40,5 @@
             (define-key sgml-mode-map (kbd "C-c r") 'rename-sgml-tag)))
 
 (global-set-key (kbd "<f12>") 'nav-toggle)
+
+(global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)

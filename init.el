@@ -24,6 +24,7 @@
 
 (load "ancane-ido.el")
 (load "ancane-general.el")
+(load "ancane-modeline.el")
 (load "ancane-func.el")
 (load "ancane-ibuffer.el")
 (load "ancane-keys.el")
