@@ -10,7 +10,9 @@
 (ac-config-default)
 (global-auto-complete-mode t)
 (auto-complete-mode t)
-(paredit-mode -1)
+
+;;(paredit-mode -1)
+;;(autoload 'paredit-mode "paredit" -1)
 
 ;;(global-font-lock-mode 1)
 ;;(global-hl-line-mode 1)
@@ -18,11 +20,6 @@
 (setq desktop-save-buffer t)
 
 (global-linum-mode 1)
-;;(global-undo-tree-mode)
-
-(setq undo-tree-mode-lighter "")
-(require 'undo-tree)
-(global-undo-tree-mode)
 
 (cua-mode t)
 (setq delete-by-moving-to-trash t)
@@ -69,3 +66,4 @@
 (setq global-auto-revert-non-file-buffers t)
 (setq auto-revert-verbose nil)
 
+(require 'redo+)
