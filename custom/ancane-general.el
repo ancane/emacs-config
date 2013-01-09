@@ -11,6 +11,8 @@
 (global-auto-complete-mode t)
 (auto-complete-mode t)
 
+(require 'zencoding-mode)
+
 ;;(paredit-mode -1)
 ;;(autoload 'paredit-mode "paredit" -1)
 

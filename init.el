@@ -22,13 +22,15 @@
 
 (add-to-list 'load-path "~/.emacs.d/custom")
 
-(load "ancane-ido.el")
+(load "ancane-func.el")
 (load "ancane-general.el")
 (load "ancane-modeline.el")
-(load "ancane-func.el")
+(load "ancane-ido.el")
 (load "ancane-ibuffer.el")
-(load "ancane-keys.el")
 (load "ancane-nav.el")
 (load "ancane-scala.el")
+(load "ancane-hooks.el")
+(load "ancane-mark.el")
+(load "ancane-keys.el")
 
 (put 'ido-exit-minibuffer 'disabled nil)
