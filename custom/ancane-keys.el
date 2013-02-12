@@ -19,7 +19,7 @@
 
 (global-set-key (kbd "M-<f4>") 'save-buffers-kill-terminal)
 (global-set-key (kbd "M-g") 'goto-line)
-(global-set-key (kbd "C-q") 'kill-buffer)
+(global-set-key (kbd "C-q") 'goto-last-change)
 
 (global-set-key (kbd "C-s") 'save-buffer)
 (global-set-key (kbd "C-x C-s") 'save-some-buffers)
