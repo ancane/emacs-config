@@ -47,3 +47,12 @@
 (global-set-key (kbd "<f12>") 'nav-toggle)
 
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
+
+
+(global-set-key (kbd "M-0") 'delete-window)
+
+(global-set-key (kbd "M-1") 'delete-other-windows)
+
+(global-set-key (kbd "M-2") 'split-window-below)
+
+(global-set-key (kbd "M-3") 'split-window-right)
