@@ -1,0 +1,3 @@
+mkdir -P com/thenewmotion/chargenetwork/lovetoload/rest
+mkdir -p com/thenewmotion/chargenetwork/lovetoload/rest
+exit

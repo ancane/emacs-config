@@ -68,4 +68,5 @@
 (setq global-auto-revert-non-file-buffers t)
 (setq auto-revert-verbose nil)
 
-(require 'redo+)
+(require 'linear-undo)
+(linear-undo-mode t)
