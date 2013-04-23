@@ -80,3 +80,5 @@
 
 ;; Helm is incremental completion and selection narrowing framework
 (require 'helm)
+
+(auto-fill-mode -1)

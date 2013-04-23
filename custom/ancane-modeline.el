@@ -73,5 +73,3 @@
                             ;;                    (emacs-uptime "Uptime:%hh"))
                             ))
         ))
-
-(provide 'mode-line-conf)

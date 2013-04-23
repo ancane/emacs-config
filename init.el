@@ -36,6 +36,7 @@
 (load "ancane-mark.el")
 (load "ancane-js.el")
 (load "ancane-ace-jump.el")
+(load "ancane-yas.el")
 (load "ancane-keys.el")
 
 (put 'ido-exit-minibuffer 'disabled nil)
