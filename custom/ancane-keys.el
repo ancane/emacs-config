@@ -50,9 +50,17 @@
 
 
 (global-set-key (kbd "M-0") 'delete-window)
-
 (global-set-key (kbd "M-1") 'delete-other-windows)
-
 (global-set-key (kbd "M-2") 'split-window-below)
-
 (global-set-key (kbd "M-3") 'split-window-right)
+
+
+(global-set-key (kbd "M-S-<down>") 'duplicate-start-of-line-or-region)
+
+(global-set-key (kbd "C-x j") 'ace-jump-mode)
+(define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
+
+(global-set-key (kbd "<print>") 'helm-mini)
+
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)

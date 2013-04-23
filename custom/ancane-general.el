@@ -70,3 +70,13 @@
 
 (require 'linear-undo)
 (linear-undo-mode t)
+
+(setq c-default-style "java")
+
+(setq require-final-newline 't)
+
+;; For camelCase parts selection
+(global-subword-mode 1)
+
+;; Helm is incremental completion and selection narrowing framework
+(require 'helm)

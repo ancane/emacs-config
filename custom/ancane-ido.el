@@ -15,3 +15,8 @@
        ido-max-prospects 8
        ido-use-filename-at-point (quote guess)
        )
+
+;; Vertical ido is cool!!!
+(require 'ido-vertical-mode)
+(ido-vertical-mode)
+(ido-yes-or-no-mode)

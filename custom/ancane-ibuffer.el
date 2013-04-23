@@ -7,20 +7,30 @@
 (setq ibuffer-saved-filter-groups
       '(("work"
          ("Scala" (mode . scala-mode))
-         ("Web" (or (mode . nxhtml-mode)
-                    (mode . html-mode)
-                    (mode . nxml-mode)
-                    (mode . xml-mode)
-                    (mode . css-mode)
-                    (mode . js-mode)
-                    (mode . js2-mode)))
+
+         ("JS"  (or (mode . js2-mode)
+                    (mode . js-mode)))
+
+         ("CSS"  (mode . css-mode))
+
+         ("XHTML" (or (mode . nxhtml-mode)
+                     (mode . html-mode)
+                     (mode . nxml-mode)
+                     (mode . xml-mode)
+                     ))
+
          ("SQL" (mode . sql-mode))
+
          ("Configs" (or (filename . ".emacs.d")
                         (filename . "el-files")))
+
          ("Haskell" (mode . haskell-mode))
+
          ("Org" (or (mode . org-mode)
                     (filename . "OrgMode")))
+
          ("ELisp" (filename . "el"))
+
          ("Dired" (mode . dired-mode))
          )))
 
