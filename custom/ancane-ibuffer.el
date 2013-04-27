@@ -40,6 +40,7 @@
              (ibuffer-switch-to-saved-filter-groups "work")))
 
 
+;; Remove top information bar
 (defadvice ibuffer-update-title-and-summary (after remove-column-titles)
   (save-excursion
     (set-buffer "*Ibuffer*")
@@ -66,11 +67,9 @@
 ;; Modify the default ibuffer-formats
 (setq ibuffer-formats
       '((mark modified read-only " "
-              (name 18 18 :left :elide)
-              " "
-              (size-h 9 -1 :right)
-              " "
-              (mode 16 16 :left :elide)
+              (name 25 25 :left :elide)
+;;              " "
+;;              (size-h 9 -1 :right)
               " "
               filename-and-process)))
 
@@ -82,3 +81,26 @@
     (ibuffer-jump-to-buffer recent-buffer-name)))
 
 (ad-activate 'ibuffer)
+
+
+;; Fix Backward-Tab when header is disabled.
+(progn
+  (defun ibuffer-backward-filter-group (&optional count)
+    "Move point backwards by COUNT filtering groups."
+    (interactive "P")
+    (unless count
+      (setq count 1))
+    (when (> count 0)
+      (when (= (point) (point-min))
+        (goto-char (point-max))
+        (ibuffer-backward-filter-group 1))
+      (when (get-text-property (point) 'ibuffer-filter-group-name)
+        (goto-char (previous-single-property-change
+                    (point) 'ibuffer-filter-group-name
+                    nil (point-min))))
+      (goto-char (previous-single-property-change
+                  (point) 'ibuffer-filter-group-name
+                  nil (point-min)))
+      (ibuffer-backward-filter-group (1- count)))
+    (ibuffer-forward-line 0))
+  )
