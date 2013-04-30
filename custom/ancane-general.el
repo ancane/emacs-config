@@ -82,3 +82,5 @@
 (require 'helm)
 
 (auto-fill-mode -1)
+
+(require 'move-text)
