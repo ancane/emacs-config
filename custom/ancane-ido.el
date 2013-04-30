@@ -17,6 +17,6 @@
        )
 
 ;; Vertical ido is cool!!!
-(require 'ido-vertical-mode)
-(ido-vertical-mode)
+;;(require 'ido-vertical-mode)
+;;(ido-vertical-mode)
 (ido-yes-or-no-mode)

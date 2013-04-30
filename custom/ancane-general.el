@@ -54,8 +54,8 @@
 
 (setq x-select-enable-clipboard t)
 
-(setenv "JAVA_OPTS" "-Xmx1024m -Xms256m -XX:MaxPermSize=128m -Dfile.encoding=UTF-8")
-(setenv "MAVEN_OPTS" "-Xmx1024m -Xms256m -XX:MaxPermSize=128m -Dfile.encoding=UTF-8")
+(setenv "JAVA_OPTS" "-Xmx512m -Xms256m -XX:MaxPermSize=256m -Dfile.encoding=UTF-8")
+(setenv "MAVEN_OPTS" "-Xmx512m -Xms256m -XX:MaxPermSize=256m -Dfile.encoding=UTF-8")
 
 (global-subword-mode 1)
 

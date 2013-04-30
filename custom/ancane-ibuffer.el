@@ -8,16 +8,16 @@
       '(("work"
          ("Scala" (mode . scala-mode))
 
-         ("JS"  (or (mode . js2-mode)
-                    (mode . js-mode)))
-
-         ("CSS"  (mode . css-mode))
-
          ("XHTML" (or (mode . nxhtml-mode)
                      (mode . html-mode)
                      (mode . nxml-mode)
                      (mode . xml-mode)
                      ))
+
+         ("JS"  (or (mode . js2-mode)
+                    (mode . js-mode)))
+
+         ("CSS"  (mode . css-mode))
 
          ("SQL" (mode . sql-mode))
 
@@ -31,7 +31,6 @@
 
          ("ELisp" (filename . "el"))
 
-         ("Dired" (mode . dired-mode))
          )))
 
 (add-hook 'ibuffer-mode-hook
