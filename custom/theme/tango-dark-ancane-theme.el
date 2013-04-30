@@ -1,5 +1,5 @@
 (deftheme tango-dark-ancane
-  "Created 2013-03-27.")
+  "Created 2013-04-30.")
 
 (custom-theme-set-variables
  'tango-dark-ancane
@@ -7,10 +7,10 @@
 
 (custom-theme-set-faces
  'tango-dark-ancane
- '(cursor ((((class color) (min-colors 89)) (:background "#fce94f"))))
+ '(cursor ((t (:background "#fce94f"))))
  '(fringe ((((class color) (min-colors 89)) (:background "#212526"))))
- '(highlight ((((class color) (min-colors 89)) (:foreground "#2e3436" :background "#edd400"))))
- '(region ((((class color) (min-colors 89)) (:background "#555753"))))
+ '(highlight ((t (:background "#3F413D"))))
+ '(region ((t (:background "#555753"))))
  '(secondary-selection ((((class color) (min-colors 89)) (:background "#204a87"))))
  '(isearch ((((class color) (min-colors 89)) (:foreground "#eeeeec" :background "#ce5c00"))))
  '(lazy-highlight ((((class color) (min-colors 89)) (:background "#8f5902"))))
