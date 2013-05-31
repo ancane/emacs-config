@@ -88,3 +88,15 @@
     (push-mark end)
     (setq deactivate-mark nil)
     (exchange-point-and-mark)))
+
+
+
+(defun psw-get-buffer-list ()
+  (psw-filter (lambda (a) (and
+                      (buffer-live-p a)
+                      (not (minibufferp a))
+                      (not (equal (substring (buffer-name a) 0 2) " *"))
+                      (not (equal (substring (buffer-name a) 0 1) "*"))
+                      )
+                )
+              (buffer-list)))

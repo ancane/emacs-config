@@ -1,7 +1,7 @@
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("ELPA" . "http://tromey.com/elpa/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 
 (setq ring-bell-function 'ignore) ;; No ring or visual warnings
@@ -33,6 +33,11 @@
       scroll-up-margin 5
       scroll-preserve-screen-position t ; без этого не будет нормально работать страница вниз/вверх
       )
+
+(setq-default scroll-margin 1
+      scroll-conservatively 2000
+      scroll-up-aggressively 0.01
+      scroll-down-aggressively 0.01)
 
 ;; Использовать окружение UTF-8
 (set-language-environment 'UTF-8)
