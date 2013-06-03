@@ -89,3 +89,5 @@
 (auto-fill-mode -1)
 
 (require 'move-text)
+
+(require 'popup-switcher)
