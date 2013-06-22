@@ -71,4 +71,4 @@
 (global-set-key (kbd "C-+") 'text-scale-decrease)
 
 (global-set-key (kbd "C-x o") 'ibuffer)
-(global-set-key (kbd "C-;") 'psw-switch)
+(global-set-key (kbd "C-;") 'psw-switch-buffer)
