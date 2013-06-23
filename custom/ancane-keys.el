@@ -6,6 +6,7 @@
 
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-S-z") 'redo)
+(global-set-key (kbd "C-x C-z") 'ignore)
 
 (global-set-key (kbd "C-x C-r") 'ido-recentf-open)
 (global-set-key (kbd "C-k") 'kill-and-join-forward)
@@ -15,6 +16,12 @@
 
 (global-set-key (kbd "C-f") 'isearch-forward)
 (global-set-key (kbd "C-S-f") 'isearch-backward)
+(define-key isearch-mode-map (kbd "C-o") 'isearch-occur)
+
+(global-set-key (kbd "M-<f3>")  'yank-thing-into-search)
+(global-set-key (kbd "<f3>")    'ancane-search-at-point-forward)
+(global-set-key (kbd "C-<f3>")  'ancane-search-at-point-backwards)
+
 
 (global-set-key (kbd "M-<f4>") 'save-buffers-kill-terminal)
 (global-set-key (kbd "M-g") 'goto-line)
@@ -32,7 +39,7 @@
 
 (global-set-key (kbd "C-<") 'mark-previous-like-this)
 (global-set-key (kbd "C->") 'mark-next-like-this)
-(global-set-key (kbd "C-M-m") 'mark-more-like-this) ;; like the other two, but takes an argument (negative is previous)
+(global-set-key (kbd "C-M-m") 'mark-more-like-this)
 (global-set-key (kbd "C-*") 'mark-all-like-this)
 
 (global-set-key (kbd "C-/") 'er/expand-region)
@@ -72,3 +79,6 @@
 
 (global-set-key (kbd "C-x o") 'ibuffer)
 (global-set-key (kbd "C-;") 'psw-switch-buffer)
+
+(global-set-key (kbd "<f7>") 'start-kbd-macro)
+(global-set-key (kbd "<f8>") 'kmacro-end-or-call-macro)

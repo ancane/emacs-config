@@ -100,3 +100,35 @@
                       )
                 )
               (buffer-list)))
+
+
+(setq ancane-search-at-point-wrap nil)
+
+(defun ancane-search-at-point-func (direction)
+  (interactive)
+  (let* ((text (car search-ring)) newpoint)
+        (when ancane-search-at-point-wrap
+             (goto-char (if (= direction 1) (point-min) (point-max)))
+             (setq ancane-search-at-point-wrap nil))
+        (setq newpoint (search-forward text nil t direction))
+        (if newpoint
+          (set-mark (if (= direction 1) (- newpoint (length text))
+                         (+ newpoint (length text))))
+          (message "No more: %s" text) (ding)
+          (setq ancane-search-at-point-wrap text))))
+
+(defun ancane-search-at-point-forward ()
+  (interactive)
+  (ancane-search-at-point-func 1))
+
+(defun ancane-search-at-point-backwards ()
+  (interactive)
+  (ancane-search-at-point-func -1))
+
+(defun yank-thing-into-search ()
+   (interactive)
+   (let ((text (if mark-active
+          (buffer-substring-no-properties (region-beginning)(region-end))
+                 (or (current-word) ""))))
+     (when (> (length text) 0) (isearch-update-ring text) (setq ancane-search-at-point-wrap nil)
+           (ancane-search-at-point-forward))))
