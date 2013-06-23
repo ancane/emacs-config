@@ -2,17 +2,6 @@
 ;; mode-line (emacs status bar) config
 ;;
 (column-number-mode t)
-(setq display-time-format "%H:%M")
-(display-time-mode t)
-
-(when (require 'battery nil 'noerror)
-  (progn
-    (setq battery−mode−line−format " [%L %p%% %dC]")
-    (when (and battery-status-function
-       (not (string-match-p "N/A"
-                (battery-format "%B"
-                        (funcall battery-status-function)))))
-      (display-battery-mode 1))))
 
 (setq-default mode-line-format
   (list ""
@@ -66,10 +55,4 @@
                                            'help-echo "Buffer is read-only"))))
         ") "
 
-        ;; add the time, with the date and the emacs uptime in the tooltip
-        ;; and system load average
-        '(:eval (propertize (format-mode-line global-mode-string)
-                            ;; 'help-echo (concat (format-time-string "%c; ")
-                            ;;                    (emacs-uptime "Uptime:%hh"))
-                            ))
         ))
