@@ -1,7 +1,7 @@
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives '("ELPA" . "http://tromey.com/elpa/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("ELPA"      . "http://tromey.com/elpa/"))
+(add-to-list 'package-archives '("melpa"     . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 
 (setq ring-bell-function 'ignore) ;; No ring or visual warnings
@@ -91,3 +91,5 @@
 (require 'move-text)
 
 (require 'popup-switcher)
+
+(require 'regpop)
