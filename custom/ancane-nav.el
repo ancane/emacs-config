@@ -3,14 +3,27 @@
 (defun nav-jump-to-current-dir ()
   (interactive)
 
-  (let ((buff-name buffer-file-name))
-    (if buff-name
-        (with-current-buffer "*nav*"
-          (progn
-            (nav-jump-to-dir (file-name-directory buff-name))
-            (if (boundp 'linum-mode)
-                (linum-update-current))))
+  (let ((bufferList (mapcar (lambda (wnd) (window-buffer wnd))  (window-list)))
+        (bufferFound nil)
+        (i 0)
+        (current-buffer-name (buffer-file-name)))
+
+    (if current-buffer-name
+        (while
+            (and (not bufferFound) (<= i (length bufferList)))
+
+          ;; if found, set bufferFound
+          (when (equal (substring (buffer-name (elt bufferList i)) 0 5) "*nav*")
+            (setq bufferFound t)
+            (with-current-buffer (elt bufferList i)
+              (progn
+                (nav-jump-to-dir (file-name-directory current-buffer-name))
+                (if (boundp 'linum-mode)
+                    (linum-update-current))))
+            )
+          (setq i (1+ i)))
       (message "No file for current buffer" ))))
+
 
 ;; Remove after hook pull request is accepted by popup-buffer
 (defcustom psw-after-switch-hook nil
