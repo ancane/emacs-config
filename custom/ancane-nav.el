@@ -42,3 +42,17 @@
   (run-hooks 'psw-after-switch-hook))
 
 (add-hook 'psw-after-switch-hook 'nav-jump-to-current-dir)
+
+
+
+(setq nav-toggle-refreshable-buffers ())
+
+(defun nav-toggle-refreshable ()
+  "Toggles the nav panel that maintains pair - current-buffer -> nav buffer."
+  (interactive)
+  (let (curr-buffer)
+    (setq curr-buffer (current-buffer))
+    (nav-toggle)
+    (setq nav-toggle-refreshable-buffers (cons 'curr-buffer nav-toggle-refreshable-buffers))
+    )
+  )
