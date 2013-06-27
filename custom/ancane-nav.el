@@ -44,15 +44,48 @@
 (add-hook 'psw-after-switch-hook 'nav-jump-to-current-dir)
 
 
+;; nav-toggle now can track which buffer it was toggled from
+;; nav-toggle-refreshable-buffers variable contains pair of nav buffer
+;; and original buffer
+
 
 (setq nav-toggle-refreshable-buffers ())
 
-(defun nav-toggle-refreshable ()
-  "Toggles the nav panel that maintains pair - current-buffer -> nav buffer."
-  (interactive)
+(defun nav-remove-from-toggled-buffers ()
   (let (curr-buffer)
     (setq curr-buffer (current-buffer))
-    (nav-toggle)
-    (setq nav-toggle-refreshable-buffers (cons 'curr-buffer nav-toggle-refreshable-buffers))
-    )
-  )
+    (mapcar (lambda (buffer-pair)
+              (if (equal curr-buffer (car buffer-pair))
+                  (setq nav-toggle-refreshable-buffers (remove buffer-pair nav-toggle-refreshable-buffers))
+                ))
+            nav-toggle-refreshable-buffers)))
+
+(defun nav-add-to-toggled-buffers (toggle-buffer)
+  (setq nav-toggle-refreshable-buffers
+        (cons (list (current-buffer) toggle-buffer) nav-toggle-refreshable-buffers)))
+
+(defun nav-toggle-tracked ()
+  "Toggles refreshable the nav panel."
+  (interactive)
+  (if (nav-current-buffer-is-nav)
+      (progn
+        (nav-remove-from-toggled-buffers) ; remove current buffer from refresh list
+        (nav-unsplit-window-horizontally))
+    (if (nav-left-neighbor-is-nav)
+	(progn
+	  (windmove-left)
+          (nav-remove-from-toggled-buffers)
+	  (nav-unsplit-window-horizontally))
+      (progn
+        (let (cur-buffer)
+          (setq cur-buffer (current-buffer))
+          (nav)
+          (nav-add-to-toggled-buffers cur-buffer))))))
+
+(defun nav-toggle-print-refreshable-buffers ()
+  (interactive)
+  (let ((msg ""))
+    (mapcar
+     (lambda (buffer-pair) (setq msg (concat msg (buffer-name (car buffer-pair)) "-" (buffer-name (car (cdr buffer-pair))))))
+     nav-toggle-refreshable-buffers)
+    (message msg)))
