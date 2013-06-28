@@ -44,48 +44,64 @@
 (add-hook 'psw-after-switch-hook 'nav-jump-to-current-dir)
 
 
-;; nav-toggle now can track which buffer it was toggled from
-;; nav-toggle-refreshable-buffers variable contains pair of nav buffer
-;; and original buffer
+;; nav-toggle now can track which window it is connected to (was toggled from)
+;; nav-buffer-to-source-window variable contains pair of nav buffer
+;; and original window
 
+(setq nav-buffer-to-source-window ())
 
-(setq nav-toggle-refreshable-buffers ())
+(defun nav-remove-from-nav-list ()
+  (let (current-nav-buffer)
+    (setq current-nav-buffer (current-buffer))
+    (mapcar
+     (lambda (x)
+       (pcase x
+         (`(,nav-buffer ,_)
+          (if (equal current-nav-buffer nav-buffer)
+              (setq nav-buffer-to-source-window (remove x nav-buffer-to-source-window))))))
+     nav-buffer-to-source-window)))
 
-(defun nav-remove-from-toggled-buffers ()
-  (let (curr-buffer)
-    (setq curr-buffer (current-buffer))
-    (mapcar (lambda (buffer-pair)
-              (if (equal curr-buffer (car buffer-pair))
-                  (setq nav-toggle-refreshable-buffers (remove buffer-pair nav-toggle-refreshable-buffers))
-                ))
-            nav-toggle-refreshable-buffers)))
+(defun nav-search-nav-buffer-recur (nav-list search-window)
+  (pcase (car nav-list)
+    (`(,nav-buffer ,related-window)
+     (if (equal search-window related-window)
+         nav-buffer
+       (nav-search-nav-buffer-recur (cdr nav-list) search-window)))))
 
-(defun nav-add-to-toggled-buffers (toggle-buffer)
-  (setq nav-toggle-refreshable-buffers
-        (cons (list (current-buffer) toggle-buffer) nav-toggle-refreshable-buffers)))
+(defun nav-get-related-nav-buffer (&optional buffer)
+  ; returns nav buffer related to given buffer
+  (interactive)
+  (let (search-window)
+    (setq search-window (get-buffer-window (if (bufferp buffer)
+                                               buffer
+                                             (current-buffer))))
+    (nav-search-nav-buffer-recur nav-buffer-to-source-window search-window)))
 
-(defun nav-toggle-tracked ()
-  "Toggles refreshable the nav panel."
+(defun nav-add-to-nav-list (window)
+  (setq nav-buffer-to-source-window
+        (cons (list (current-buffer) window) nav-buffer-to-source-window)))
+
+(defun nav ()
+  "Opens Nav in a new window to the left of the current one."
+  (interactive)
+  (let ((default-directory (nav-get-working-dir))
+        (new-window (split-window-horizontally)))
+    (nav-in-place)
+    (nav-set-window-width nav-width)
+    new-window))
+
+(defun nav-toggle ()
+  "Toggles the nav panel."
   (interactive)
   (if (nav-current-buffer-is-nav)
       (progn
-        (nav-remove-from-toggled-buffers) ; remove current buffer from refresh list
+        (nav-remove-from-nav-list)
         (nav-unsplit-window-horizontally))
     (if (nav-left-neighbor-is-nav)
-	(progn
-	  (windmove-left)
-          (nav-remove-from-toggled-buffers)
-	  (nav-unsplit-window-horizontally))
+        (progn
+          (windmove-left)
+          (nav-remove-from-nav-list)
+          (nav-unsplit-window-horizontally))
       (progn
-        (let (cur-buffer)
-          (setq cur-buffer (current-buffer))
-          (nav)
-          (nav-add-to-toggled-buffers cur-buffer))))))
-
-(defun nav-toggle-print-refreshable-buffers ()
-  (interactive)
-  (let ((msg ""))
-    (mapcar
-     (lambda (buffer-pair) (setq msg (concat msg (buffer-name (car buffer-pair)) "-" (buffer-name (car (cdr buffer-pair))))))
-     nav-toggle-refreshable-buffers)
-    (message msg)))
+        (let ((current-window (nav)))
+          (nav-add-to-nav-list current-window))))))
