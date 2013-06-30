@@ -1,7 +1,7 @@
 (require 'ido)
 (require 'recentf)
 
-(ido-mode 'doth)
+(ido-mode 'both)
 
 (recentf-mode 1)
 (setq recentf-max-saved-items 20)
@@ -16,7 +16,6 @@
        ido-use-filename-at-point (quote guess)
        )
 
-;; Vertical ido is cool!!!
-;;(require 'ido-vertical-mode)
-;;(ido-vertical-mode)
 (ido-yes-or-no-mode)
+
+(global-set-key (kbd "C-x C-r") 'ido-recentf-open)

@@ -1,5 +1,8 @@
 (require 'nav)
 
+(global-set-key (kbd "<f12>") 'nav-toggle)
+
+
 (defun nav-jump-to-current-dir ()
   (interactive)
 

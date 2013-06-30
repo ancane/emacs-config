@@ -1,5 +1,8 @@
 (require 'ibuf-ext)
 
+(global-set-key (kbd "C-x o") 'ibuffer)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+
 (add-to-list 'ibuffer-never-show-predicates "^\\*")
 
 (setq ibuffer-show-empty-filter-groups nil)

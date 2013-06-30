@@ -92,4 +92,4 @@
 
 (require 'popup-switcher)
 
-(require 'regpop)
+;(require 'regpop)

@@ -1,7 +1,7 @@
 (require 'yasnippet)
 
 ;; Own snippets, not bundled ones
-(setq yas/snippet-dirs '("~/.emacs.d/custom/snippets"))
+(setq yas/snippet-dirs '("~/.emacs.d/conf/snippets"))
 (yas/global-mode 1)
 
 (yas/initialize)
