@@ -1,31 +1,8 @@
+(add-to-list 'load-path "~/.emacs.d/elpa-custom/nav")
+
 (require 'nav)
 
 (global-set-key (kbd "<f12>") 'nav-toggle)
-
-
-(defun nav-jump-to-current-dir ()
-  (interactive)
-
-  (let ((bufferList (mapcar (lambda (wnd) (window-buffer wnd))  (window-list)))
-        (bufferFound nil)
-        (i 0)
-        (current-buffer-name (buffer-file-name)))
-
-    (if current-buffer-name
-        (while
-            (and (not bufferFound) (<= i (length bufferList)))
-
-          ;; if found, set bufferFound
-          (when (equal (substring (buffer-name (elt bufferList i)) 0 5) "*nav*")
-            (setq bufferFound t)
-            (with-current-buffer (elt bufferList i)
-              (progn
-                (nav-jump-to-dir (file-name-directory current-buffer-name))
-                (if (boundp 'linum-mode)
-                    (linum-update-current))))
-            )
-          (setq i (1+ i)))
-      (message "No file for current buffer" ))))
 
 
 ;; Remove after hook pull request is accepted by popup-buffer
