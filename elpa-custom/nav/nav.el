@@ -115,7 +115,7 @@ directories."
   (let ((keymap (make-sparse-keymap)))
     (define-key keymap "a" 'ack)
     (define-key keymap "c" 'nav-copy-file-or-dir)
-    (define-key keymap "C" 'nav-customize)
+    (define-key keymap "C" 'nav-copy-file-or-dir-name)
     (define-key keymap "d" 'nav-delete-file-or-dir-on-this-line)
     (define-key keymap "e" 'nav-invoke-dired)
     (define-key keymap "f" 'nav-find-files)
@@ -573,7 +573,7 @@ This works like a web browser's back button."
       ;; We first use directory-file-name to strip the trailing slash
       ;; if it's a symlink to a directory.
       (let ((filename (directory-file-name filename)))
-        (when (y-or-n-p (format "Really delete file %s ? " filename))
+        (when (yes-or-no-p (format "Really delete file %s ? " filename))
           (delete-file filename)
           (nav-refresh))))
   (nav-restore-cursor-line))
@@ -591,6 +591,19 @@ This works like a web browser's back button."
 	(copy-directory filename target-name)
       (copy-file filename target-name)))
   (nav-refresh))
+
+(defun nav-copy-file-or-dir-name ()
+  "Copies a file or directory."
+  (interactive)
+  (let ((filename (nav-get-cur-line-str))
+        (target-name (read-file-name "Copy to: " default-directory nil nil (nav-get-cur-line-str))))
+    (if (file-directory-p filename)
+	(copy-directory filename target-name)
+      (copy-file filename target-name)))
+  (nav-refresh))
+
+
+
 
 (defun nav-customize ()
   "Starts customization for Nav."
