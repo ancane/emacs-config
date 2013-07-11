@@ -3,6 +3,7 @@
 ;;
 (column-number-mode t)
 
+
 (setq-default mode-line-format
   (list ""
         ;; file encoding

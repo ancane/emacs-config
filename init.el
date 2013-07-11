@@ -28,7 +28,6 @@
 
 (load "ancane-func.el")
 (load "ancane-general.el")
-(load "ancane-modeline.el")
 (load "ancane-ido.el")
 (load "ancane-ibuffer.el")
 (load "ancane-nav.el")
@@ -39,6 +38,8 @@
 (load "ancane-ace-jump.el")
 (load "ancane-yas.el")
 (load "ancane-keys.el")
+;(load "ancane-modeline.el")
+(load "ancane-mainline.el")
 
 (put 'ido-exit-minibuffer 'disabled nil)
 (custom-set-faces

@@ -796,9 +796,6 @@ instance."
   (nav-mode)
   (nav-refresh))
 
-;; The next line is for ELPA, the Emacs Lisp Package Archive.
-;;;###autoload
-
 (defun nav ()
   "Opens Nav in a new window to the left of the current one."
   (interactive)
@@ -807,6 +804,9 @@ instance."
     (nav-in-place)
     (nav-set-window-width nav-width)
     new-window))
+
+;; The next line is for ELPA, the Emacs Lisp Package Archive.
+;;;###autoload
 
 
 (provide 'nav)
